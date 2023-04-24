@@ -33,6 +33,13 @@ public class EmpController {
 	 return lst;
 	}
 	
+	@GetMapping("/getll")
+	public List<EmpModel> getAlmployee1() {
+	 List<EmpModel> lst= empService.getAllEmployee();
+	 LOGGER.info("getting all employees");
+	 return lst;
+	}
+	
 	@PostMapping("/post")
 	public String postEmp(@RequestBody EmpModel e) {
 		empService.postEmp(e);
